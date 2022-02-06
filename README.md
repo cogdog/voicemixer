@@ -12,9 +12,13 @@ SPLOTish tool for creating mixes of different voices reading the same original t
 
 I made [a first version specific for my own podcast series](https://cogdog.github.io/mixvoices/) and it has been working great. But I wanted to have a version better suited for someone else to be able to do the same thing.
 
-Here it is, and as a demo, I used the [OS X voice generation "say" tool](https://infoheap.com/convert-text-to-speech-on-mac-using-utility-say/) to have seven computer voices read the lines of 
+Here it is, and as a demo, I used the [OS X voice generation "say" tool](https://infoheap.com/convert-text-to-speech-on-mac-using-utility-say/) to have seven computer voices read the lines of Emily Dickinson's [To Make A Prairie It Takes A Clover And One Bee](http://www.public-domain-poetry.com/emily-elizabeth-dickinson/to-make-a-prairie-it-takes-a-clover-and-one-bee-13879).
 
-Emily Dickinson's [To Make A Prairie It Takes A Clover And One Bee](http://www.public-domain-poetry.com/emily-elizabeth-dickinson/to-make-a-prairie-it-takes-a-clover-and-one-bee-13879).
+Give it a spin at https://cogdog.github.io/voicemixer/
+
+
+[![](images/voicemixer-demo.jpg "Remix Emily Dickinson")](https://cogdog.github.io/voicemixer/)
+
 
 The site lets you generate random mixes. If there is one worth saving, it offers a downloadble configuration file which can be run command line (I hear the room emptying) to stitch them together into a single mp3.
 

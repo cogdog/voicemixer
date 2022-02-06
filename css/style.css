@@ -26,8 +26,12 @@
 
 #footer a, #main, pre {
 	color:#fff;
+}
+
+#footer a {
 	text-decoration: underline;
 }
+
 
 /* toggle open/closed content */
 details {
