@@ -1,0 +1,9 @@
+# Voice Mix created Sat Feb 05 2022 16:49:11 GMT-0600 (Central Standard Time)
+# Run from directory containing 'audio'
+# ffmpeg -f concat -safe 0 -i voices.txt -c copy voicemix.mp3
+file 'audio/segment-1/moira-1.mp3'
+file 'audio/segment-2/tessa-2.mp3'
+file 'audio/segment-3/samantha-3.mp3'
+file 'audio/segment-4/xander-4.mp3'
+file 'audio/segment-5/alex-5.mp3'
+# Voice credits: Moira, Tessa, Samantha, Xander, Alex

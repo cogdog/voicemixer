@@ -1,0 +1,49 @@
+.jumbotron  {
+	opacity: 0.8;
+	margin-bottom:1em;
+	min-height: 4em;
+}
+
+#sitename {
+	font-size:4vw;
+}
+
+.hide {
+	display:none;
+}
+
+
+#mixlist {
+	opacity: 0.8;
+	background-color:#000;
+}	    
+
+#footer {
+	color:#fff;
+	font-size: 0.8em;
+	line-height:1.1;
+}	
+
+#footer a, #main, pre {
+	color:#fff;
+	text-decoration: underline;
+}
+
+/* toggle open/closed content */
+details {
+  margin-bottom: 2rem;
+  padding: .5rem 1rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary > * {
+  display: inline;
+}
+
+summary em {
+	font-size: 80%;
+	float: right;
+}
