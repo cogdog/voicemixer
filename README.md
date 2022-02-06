@@ -17,7 +17,7 @@ Here it is, and as a demo, I used the [OS X voice generation "say" tool](https:/
 Give it a spin at https://cogdog.github.io/voicemixer/
 
 
-![](images/voicemixer-demo.jpg "Remix Emily Dickinson")
+[![](images/voicemixer-demo.jpg "Remix Emily Dickinson")](https://cogdog.github.io/voicemixer/)
 
 
 The site lets you generate random mixes. If there is one worth saving, it offers a downloadble configuration file which can be run command line (I hear the room emptying) to stitch them together into a single mp3.
