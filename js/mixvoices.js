@@ -89,44 +89,22 @@ function mixaudio(max) {
 		// find all people that have this in their segments
 		inthemix = people.filter(inthemix => inthemix.segments.includes(m));
 		
-		// special case to get 3 unique tracks for segment 2
-		if (m==2) {
 		
-			// clever code to get 3 random elements 
-			// h/t https://stackoverflow.com/a/38571132/2418186
-			let track2 = inthemix.sort(() => .5 - Math.random()).slice(0,3);
-			
-			for  (let j = 0; j < track2.length; j++) {
-				// add the track file name, relative
-				alltracks.push(new Audio('audio/segment-'+ m + '/' + track2[j].id + '-' + m + '.mp3'));
+		// grab a person in these results
+		randomperson = getrandom(inthemix);
+	
+		// add the track file name, relative
+		alltracks.push(new Audio('audio/segment-'+ m + '/' + randomperson.id + '-' + m + '.mp3'));
+	
+		// append to credits if not already there, add to speakers list too
+		if (!credits.includes( randomperson.name) ) credits.push(randomperson.name);
+		speakers.push(randomperson.name);
 		
-				// append to credits if not already there, add to speakers list too
-				if (!credits.includes(track2[j].name) ) credits.push(track2[j].name);
-				speakers.push(track2[j].name);
-				
-				// keep track of ids
-				ids.push(track2[j].id);
-				
-				ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + track2[j].id + '-' + m + ".mp3'\n";
-			}
+		// keep track of ids
+		ids.push(randomperson.id);
 		
-		} else {
-		
-			// grab a person in these results
-			randomperson = getrandom(inthemix);
-		
-			// add the track file name, relative
-			alltracks.push(new Audio('audio/segment-'+ m + '/' + randomperson.id + '-' + m + '.mp3'));
-		
-			// append to credits if not already there, add to speakers list too
-			if (!credits.includes( randomperson.name) ) credits.push(randomperson.name);
-			speakers.push(randomperson.name);
-			
-			// keep track of ids
-			ids.push(randomperson.id);
-			
-			ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + randomperson.id + '-' + m + ".mp3'\n";
-		}		
+		ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + randomperson.id + '-' + m + ".mp3'\n";
+	
 	}
 	
 	// append the credits to the download content
@@ -158,48 +136,20 @@ function setUpReplay(max) {
 	
 	for  (let m = 1; m <= max; m++) {
 	
-		// special case to get 3 unique tracks for segment 2
-		if ( m == 2 ) {
-		
-			// cycle 3 times
-			for  (let j = -1; j < 2; j++) {
-			
-				// sound index 
-				repeated = m + j;
-				
-				// add the track file name, relative
-				alltracks.push(new Audio('audio/segment-'+ m + '/' + ids[repeated] + '-' + m + '.mp3'));
-		
-				// get name
-				displayname = getNameFromID(ids[repeated]);
-	
-				// append to credits if not already there, add to speakers list too
-				if (!credits.includes( displayname ) ) credits.push(displayname);
-				speakers.push(displayname);
-				
-				ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + ids[repeated] + '-' + m + ".mp3'\n";
-			}
-			
-			// reset offset
-			offset = 1;
-		
-		} else {
-		
-			// index for sound
-			idx = m+offset;
+		// index for sound
+		idx = m+offset;
 
-			// add the track file name, relative
-			alltracks.push(new Audio('audio/segment-'+ m + '/' + ids[idx] + '-' + m + '.mp3'));
-		
-			// get name
-			displayname = getNameFromID(ids[idx]);
+		// add the track file name, relative
+		alltracks.push(new Audio('audio/segment-'+ m + '/' + ids[idx] + '-' + m + '.mp3'));
 	
-			// append to credits if not already there, add to speakers list too
-			if (!credits.includes( displayname ) ) credits.push(displayname);
-			speakers.push(displayname);
-				
-			ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + ids[idx] + '-' + m + ".mp3'\n";
-		}
+		// get name
+		displayname = getNameFromID(ids[idx]);
+
+		// append to credits if not already there, add to speakers list too
+		if (!credits.includes( displayname ) ) credits.push(displayname);
+		speakers.push(displayname);
+			
+		ffmpegtxt += 'file \'' + 'audio/segment-'+ m + '/' + ids[idx] + '-' + m + ".mp3'\n";
 	}
 	
 	// append the credits to the download content
