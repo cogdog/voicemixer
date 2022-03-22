@@ -6,6 +6,11 @@
 
 	<title>Emily Dickinson Voice Mixer</title>
 
+
+	<!-- Configuration scripts for this version   -->
+	<script src="js/config.js"></script>
+
+
     <!-- Bootstrap and icons CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
@@ -32,6 +37,9 @@
  
    		<button type="button" class="btn btn-primary btn-lg hide" id="voicepause"><i class="bi bi-pause-circle-fill"></i> Pause
 		</button>
+		
+		<button type="button" class="btn btn-primary btn-lg hide" id="voiceshare"><i class="bi bi-share-fill"></i> Share
+		</button>
  		
  		<p id="speaking">Start by making a mix...</p>
 	</div>
@@ -45,7 +53,7 @@
 	<div id="mixlist" class="hide">
 		<details>
 		<summary>For the Mixer</summary>
-		The text below can be saved to a file <code>voices.txt</code> and used by a mixmaster who has all the source audio to run via command line. Try <a href="#" id="downloadmix" download="voices.txt"><i class="bi bi-download"></i> downloading a version</a>.<br /><br />
+		The text below can be saved to a file <code>voices.txt</code> and used by a mixmaster who has all the source audio to run via command line. Try <a href="#" id="downloadmix" download="voices.txt"><i class="bi bi-download"></i> downloading a version</a>. Or use the share button above to send a link to play it back.<br /><br />
 		
 		<pre id="voicelist"></pre>
     
