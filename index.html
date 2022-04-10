@@ -3,45 +3,79 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
+	<!-- voicemixer edit: customize the title tag -->
 	<title>Emily Dickinson Voice Mixer</title>
 
-
-	<!-- Configuration scripts for this version   -->
-	<script src="js/config.js"></script>
-
-
-    <!-- Bootstrap and icons CSS -->
+	<!-- voicemixer edit: meta description for searcg results (under 160 chars) -->
+	<meta name="description" content="Computer voices reading poetry? Yup! This mixer creates a reading in the style of Mailchimp Ad for Serial. ">
+	
+    <!-- CSS for Bootstrap theme and icons  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     
-    <!-- big fan of this favicon 
+    <!--  voicemixer edit: favicon 
+    	  replace with your own 64x64px png
+    	  
+    	  I give credit, you should too
           Blender by icon scout CC BY from the Noun Project 
           https://thenounproject.com/icon/blender-4436213/ -->
-    <link rel="shortcut icon" type="image/png" href="blender.png"/>
+    <link rel="shortcut icon" type="image/png" href="shortcut-icon.png"/>
     
-	<!-- let the styling commence -->
+	<!-- web page styles -->
 	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Meta Tags Generated via https://www.opengraph.xyz 
+			used to display nice previews in social media    -->
+	
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://cogdog.github.io/voicemixer/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Emily Dickinson Voice Mixer">
+	<meta property="og:description" content="Computer voices reading poetry? Yup! This mixer creates a reading in the style of Mailchimp Ad for Serial. ">
+	<meta property="og:image" content="https://cogdog.github.io/voicemixer/background.jpg">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="cogdog.github.io">
+	<meta property="twitter:url" content="https://cogdog.github.io/voicemixer/">
+	<meta name="twitter:title" content="Emily Dickinson Voice Mixer">
+	<meta name="twitter:description" content="Computer voices reading poetry? Yup! This mixer creates a reading in the style of Mailchimp Ad for Serial. ">
+	<meta name="twitter:image" content="https://cogdog.github.io/voicemixer/background.jpg">
+
+	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
 </head>
 <body>
 
   <div class="jumbotron">
-	  <h1 id="sitenane" class="display-4 text-center">Emily Dickinson Voice Mixer</h1>
-	  <p>Can computer voices read poetry? Yup. This is a demo version ready for you to <a href="https://github.com/cogdog/voicemixer" target="_blank">fork and modify</a> of a voice mixer that can create something like the <a href="https://qz.com/298094/how-mailchimps-irresistible-serial-ad-became-the-years-biggest-marketing-win/">Mailchimp Ad for Serial</a>. Voices here were generated <a href="https://infoheap.com/convert-text-to-speech-on-mac-using-utility-say/" target="_blank">with the OSX say utility</a> to create 7 voices reading  Emily Dickinson's <a href="http://www.public-domain-poetry.com/emily-elizabeth-dickinson/to-make-a-prairie-it-takes-a-clover-and-one-bee-13879" target="_blank">To Make A Prairie It Takes A Clover And One Bee</a>.</p>
   
+  	  <!-- voicemixer edit: customize headline text -->
+	  <h1 id="sitenane" class="display-4 text-center">
+	  	Emily Dickinson Voice Mixer
+	  </h1>
+	  
+	   <!-- voicemixer edit: intro text, any HTML your heart desires betwenen p tags -->
+	  <p>
+	  	Can computer voices read poetry? Yup. This is a demo version ready for you to <a href="https://github.com/cogdog/voicemixer" target="_blank">fork and modify</a> of a voice mixer that can create something like the <a href="https://qz.com/298094/how-mailchimps-irresistible-serial-ad-became-the-years-biggest-marketing-win/">Mailchimp Ad for Serial</a>. Voices here were generated <a href="https://infoheap.com/convert-text-to-speech-on-mac-using-utility-say/" target="_blank">with the OSX say utility</a> to create 7 voices reading  Emily Dickinson's <a href="http://www.public-domain-poetry.com/emily-elizabeth-dickinson/to-make-a-prairie-it-takes-a-clover-and-one-bee-13879" target="_blank">To Make A Prairie It Takes A Clover And One Bee</a>.
+	  	</p>
+	  	
+	  	
+    <!--  buttons here, no edits -->
   	<div  class="container-fluid text-center">
   		<button type="button" class="btn btn-primary btn-lg" id="voicenew">Make New</button>
-  		<button type="button" class="btn btn-primary btn-lg hide" id="voiceplay"><i class="bi bi-play-circle"></i> Play
-		</button>
+  		
+  		<!-- playback, share buttons intitally hidden -->
+  		<button type="button" class="btn btn-primary btn-lg hide" id="voiceplay"><i class="bi bi-play-circle"></i> Play</button>
  
-   		<button type="button" class="btn btn-primary btn-lg hide" id="voicepause"><i class="bi bi-pause-circle-fill"></i> Pause
-		</button>
+   		<button type="button" class="btn btn-primary btn-lg hide" id="voicepause"><i class="bi bi-pause-circle-fill"></i> Pause</button>
 		
-		<button type="button" class="btn btn-primary btn-lg hide" id="voiceshare"><i class="bi bi-share-fill"></i> Share
-		</button>
+		<button type="button" class="btn btn-primary btn-lg hide" id="voiceshare"><i class="bi bi-share-fill"></i> Share</button>
  		
- 		<p id="speaking">Start by making a mix...</p>
+ 		<!-- voicemixer edit: this text is replayed as a status indicator, set intitial text -->
+ 		<p id="speaking">
+ 			Start by making a mix...
+ 		</p>
 	</div>
 	
   </div>
@@ -50,6 +84,7 @@
 	
 	<div id="credits"></div>
 	
+	<!-- mixing details, no edits needed -->
 	<div id="mixlist" class="hide">
 		<details>
 		<summary>For the Mixer</summary>
@@ -60,30 +95,34 @@
 	</details>
 	</div>
 
-	
-
-		
 	</div><!-- #main -->
 	
+		<!-- begin footer -->
 		<div id="footer" class="container-fluid text-center">
-		<p>
-		<!-- background image attribution -->
 		
-		Background image <a href="https://flickr.com/photos/cogdog/42429895895">Among the Prairie Flowers</a> flickr photo by <a href="https://flickr.com/people/cogdog">cogdogblog</a> shared into the public domain using <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication (CC0)</a> superimposed with public domain Free SVG image <a href="https://freesvg.org/emily-dickinsons-illustration" target="_blank">Emily Dickinson Illustration</a><br /><br />
-		<!-- code credit, thanks for keeping -->
-		code by <a href="http://cog.dog/"> @cogdog</a> and <a href="https://github.com/cogdog/voicemixer">available on github</a>
-		</p>
+
+			<!-- voicemixer edit: add background image attribution -->
+			<p>
+			Background image <a href="https://flickr.com/photos/cogdog/42429895895">Among the Prairie Flowers</a> flickr photo by <a href="https://flickr.com/people/cogdog">cogdogblog</a> shared into the public domain using <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication (CC0)</a> superimposed with public domain Free SVG image <a href="https://freesvg.org/emily-dickinsons-illustration" target="_blank">Emily Dickinson Illustration</a><br /><br />
+			<!-- code credit, thanks for keeping -->
+			code by <a href="http://cog.dog/"> @cogdog</a> and <a href="https://github.com/cogdog/voicemixer">available on github</a>
+			</p>
+		
+		<!-- place holder for script to enter all voices used as a credit -->
 		<p id="namelist"></p>
 	</div>
 
-<!--  JavaScript libs 
-	   jQuery first, then Bootstrap JS, and finally Backstretch -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
+		<!--  JavaScript libs 
+	   		jQuery first, then Bootstrap JS, and finally Backstretch -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+   	    <script src="js/jquery.backstretch.min.js"></script>
     
-    <!-- custom scripts for the mix machine -->
-    <script src="js/mixvoices.js"></script>
+    	<!-- Configuration scripts for this version  use defer to wait for load -->
+		<script defer src="js/config.js"></script>    
+		
+    	<!-- custom scripts for the mix machine  use defer to wait for load -->
+    	<script defer src="js/mixvoices.js"></script>
 
 </body>
 </html>

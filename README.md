@@ -22,19 +22,17 @@ I wanted to set up a means by which I could ask anyone interested to record the 
 
 But the thing I wanted was a web site where anyone (or just me( could generate a random mix version, and ideally some way that I could then use it to mix the audio.
 
-I made [a first version specific for my own podcast series](https://cogdog.github.io/mixvoices/) and it has been working great. It goes through some magic to assemble the 14 clips that make up the piece, randomizing the voice, and be able to play it back. It just playes them in sequence using some code I found for playing a list of mp3 audio as with HTML5 audio stuff.
+I made [a first version specific for my own podcast series](https://cogdog.github.io/mixvoices/) and it has been working great. It goes through some magic to assemble the 14 clips that make up the piece, randomizing the voice, and be able to play it back. It just plays them in sequence using some code I found for playing a list of mp3 audio as with HTML5 audio stuff.
 
-![OEG Voices Mixer](images/oeg-voice-mixer.jpg "OEG Voices Mixer")
+[![OEG Voices Mixer](images/oeg-voice-mixer.jpg "OEG Voices Mixer")](https://cogdog.github.io/mixvoices/)
 
 I have yet to figure out a way with client side Javascript, to string together the separate mp3 audio clips into a new mp3. But I did find that I could run a command line `ffmpeg` call to concatenate the source files, doing it from a text file that listed the source audio.
 
 So this data is available under the toggle labeled "For the Mixer"
 
-That did not help anyone else who might want to share a mix, but now there is a new feautre that lets anyone who uses the tool to share that link.
+That did not help anyone else who might want to share a mix, but now there is a new feature that lets anyone who uses the tool to share that link.
 
 Still, it is a tool built for me. Mine is a special case, since I copied Mailchimp by repeating the second segment 3 times (that reads "OEG Voices"), so the source code is wired specifically for my use.
-
-
 But I wanted to have a version better suited for someone else to be able to do this without the special repeat case.
 
 ## Here is the Generalized Version
@@ -155,15 +153,41 @@ Last we must define how many segments there are (for my OEG Voices on the value 
 Then, I select each sub clip, and Use File
 
 ### Customizing the Web Page
-Swap in your own nackground image for `images/background.jpg` 
 
-Next edit `index.html` to modify the screen text as follows below.
+Swap in your own background image for `background.jpg` suggested size at least 1200px x 630px.
+
+Also, if desired, create your own favicon to replace the blender one, 64x64px png saved as `shortcut-icon.png`
+
+Next edit `index.html` to modify the screen text as follows below. All areas to edit are indicated in the source HTML with comments starting like: 	
+
+`<!-- voicemixer edit: change the prompt -->`
+
+The suggested edits include:
+
+* title tag
+* meta description (if you like nice google results)
+* Meta Tags for preview display in social media (e.g. twitter cards, facebook) easily generated https://www.opengraph.xyz 
+* the headline site title, e.g. **Emily Dickinson Voice Mixer**
+* the description below the title, can be whatever HTML you like
+* image attribution or whatever else you want in the footer
+
+If you are brave enough to fork this repo, slice and dice audio, I hope some manual HTML editing is not too much!
 
 
+### Github Page Publishing
 
+If you are running your mixer from here (and I think it's the way to go) once you have made edits, uploaded your own audio, go to your repo's **Settings** then click **Pages** on the left. Under Source from the menu under **select  branch"" chose `main` then under Folder select `root`. Press Save and your mixer will be published onder your own github.io space. 
+
+## Actual Examples
+
+* OEG Voices Intro Mixer https://cogdog.github.io/mixvoices/ -- (used for [OEG Voices Podcast](http://voices.oeglobal.org))  
+* Generador de introducción de voces aleatorias OEG https://cogdog.github.io/mixvoices/es/ --  (the same introduction but for [the episodes recorded in Spanish](https://podcast.oeglobal.org/shows/spanish/)) 
+* CLMOOC Poem Voice Mixer https://dogtrax.github.io/voicewordpoem/ -- (Kevin Hodgson figured ou how to di this befire I  had any documentation, go @dogtrax!)
 
 
 ## History
-* **Mar 22, 2022** bug fixes and addition of the Share button capability
+
+* **Apr 9, 2022** Wow, actual documentation, woah.
+* **Mar 22, 2022** bug fixes, move settings into separate config.js and addition of the Share button capability
 * **Feb 5, 2022** first commit just to hang a demo.
 
