@@ -182,7 +182,7 @@ If you are running your mixer from here (and I think it's the way to go) once yo
 
 * OEG Voices Intro Mixer https://cogdog.github.io/mixvoices/ -- (used for [OEG Voices Podcast](http://voices.oeglobal.org))  
 * Generador de introducción de voces aleatorias OEG https://cogdog.github.io/mixvoices/es/ --  (the same introduction but for [the episodes recorded in Spanish](https://podcast.oeglobal.org/shows/spanish/)) 
-* CLMOOC Poem Voice Mixer https://dogtrax.github.io/voicewordpoem/ -- (Kevin Hodgson figured ou how to di this befire I  had any documentation, go @dogtrax!)
+* CLMOOC Poem Voice Mixer https://dogtrax.github.io/voicewordpoem/ -- (Kevin Hodgson figured out how to do this before I  had any documentation, go @dogtrax!)
 
 
 ## History
