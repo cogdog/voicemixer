@@ -89,7 +89,7 @@ How you edit them to extract clips is up to you, but for say 5 segments, if I go
 
 For my projects, I import the track into Audacity, and I have a label track set up spread put enough I can split the clips (**Edit** -> **Clip Boundaries** -> **Split** ) and slide them woth the Time Shift Tool to be near their labels (spacing them out makes it easier to select).
 
- ![Splitting audio clips and separating in Audacity](images/audacity-slip.jpg)]
+![Splitting audio clips and separating in Audacity](images/audacity-slip.jpg)
  
 For each segment, select the audio to use, and then do **File** -> **Export** -> **Export Selected Audio** to save each segment according to the file name to identify the voice (e.g. `mary` or `juan`), the segment number, for the file name (e.g. `mary-2.mp3` or `juan-2.mp3`), and save in the approproate segment directory (`segment-2`).
 
@@ -103,7 +103,7 @@ I also wanted to allow for the possibility where maybe one voice only read say h
 
 So the file structure ends up like this:
 
-![Audio files](images/voices-directories)]
+![Audio files](images/voices-directories.jpg)
 
 ### Setting Up the Configuration File
 Each mixer defines key parameters in the file `js/config.js`. 
