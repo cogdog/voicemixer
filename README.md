@@ -76,7 +76,7 @@ How you chop is up to you. But list put the segments so you have mapped the text
 
 In the /audio subdirectory, you will need to create a subdirectory for each segment, named sequentially:
 
-![Audio directories named segment-1, segment-2, ... segment-5](images/audio-directories.jpg)]
+![Audio directories named segment-1, segment-2, ... segment-5](images/audio-directories.jpg)
 
 You will have to make more directories if you have more segments.
 
