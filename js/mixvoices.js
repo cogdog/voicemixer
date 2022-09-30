@@ -47,7 +47,7 @@ function getAllNames() {
 		allnames.push(people[m].name);
 	}
 	
-	$( "#namelist" ).html('<p>Thanks to all voice contributors <strong>' + allnames.sort().join("</strong>, <strong>") + '</strong></p>');
+	$( "#namelist" ).html('<p>Thanks to our ' + allnames.length  +  ' voice contributors:  <strong>' + allnames.sort().join("</strong>, <strong>") + '</strong></p>');
 }
 
 function getNameFromID (findit) {
