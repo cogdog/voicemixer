@@ -209,6 +209,7 @@ function playVoices() {
 			
 			// enable the play button
 			$( "#voiceplay" ).prop("disabled", false);
+			sndx = -1;
 			return;
 		}
 		voices[sndx].addEventListener('ended', playVoices);
